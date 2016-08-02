@@ -10,17 +10,19 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    var timer = NSTimer()
+    
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var stopButton: UIButton!
     
     @IBAction func startTime(sender: AnyObject) {
-        timeLabel.text = "START"
+        validateTimer()
         alternateButtons()
     }
     
     @IBAction func stopTime(sender: AnyObject) {
-        timeLabel.text = "STOP"
+        timer.invalidate()
         alternateButtons()
     }
     
@@ -42,6 +44,15 @@ class ViewController: UIViewController {
         startButton.hidden = !startButton.hidden
         stopButton.enabled = !stopButton.enabled
         stopButton.hidden = !stopButton.hidden
+    }
+    
+    func validateTimer() {
+        let repeatingFunction = #selector(ViewController.updateTime)
+        timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: repeatingFunction, userInfo: nil, repeats: true)
+    }
+    
+    func updateTime() {
+        print("wow")
     }
 }
 
