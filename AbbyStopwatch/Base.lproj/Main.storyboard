@@ -46,6 +46,9 @@
                                 <state key="normal" title="START">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="startTime:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t3a-ZS-TDu"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="adh-BK-Woq">
                                 <rect key="frame" x="175" y="382" width="250" height="125"/>
@@ -60,6 +63,9 @@
                                 <state key="normal" title="STOP">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="stopTime:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bkk-ZL-5QD"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -72,6 +78,9 @@
                             <constraint firstItem="adh-BK-Woq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="t9X-Sz-yUc"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="timeLabel" destination="ZoZ-Cr-zNl" id="SCn-PX-mJH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
